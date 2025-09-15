@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Layout 1</title>
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+    body{
+      font-family: Arial, sans-serif;
+      background:#F8E3BC;
+      display:flex;
+      flex-direction: column;  
+	  align-items: center;  
+      padding:20px;
+    }
+	h1{
+	  text-align: center;   
+	  margin: 10px 0;      
+	}
+    .container{
+      width:500px;
+      height:500px;
+      border:2px solid #000;
+      padding:20px;
+      background:#FFD6FF;
+	  display: flex;
+	  flex-direction: column;
+    }
+    .layout{
+      flex: 1;
+	  display:grid;
+      grid-template-areas:
+        "header header"
+        "sidebar top"
+        "sidebar main"
+        "sidebar bottom";
+      grid-template-columns:95px 1fr;
+      grid-template-rows:80px 50px 1fr 70px;
+      gap:10px;
+      height:100%;
+    }
+    .header{
+      grid-area:header;
+      border:1px solid #000;
+      border-radius:0px;
+      background:#e6f0ff;
+    }
+    .sidebar{
+      grid-area:sidebar;
+      border:1px solid #000;
+      border-radius:0px;
+      background:#fef3c7;
+    }
+    .top{
+      grid-area:top;
+      border:1px solid #000;
+      border-radius:0px;
+      background:#d1fae5;
+    }
+    .main{
+      grid-area:main;
+      border:1px solid #000;
+      border-radius:0px;
+      background:#f3f4f6;
+    }
+    .bottom{
+	  grid-area:bottom;
+      border:1px solid #000;
+      border-radius:0px;
+      background:#fde68a;
+    }
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      margin: 20px;
+	}
+	.nav-links a {
+	  display: inline-block;
+	  padding: 10px 20px;
+	  border-radius: 8px;
+	  font-weight: bold;
+	  text-decoration: none;
+	  transition: background-color 0.3s, transform 0.2s;
+	  font-family: "Segoe UI", Arial, sans-serif;
+	}
+	.next-link {
+      background-color: #B8E2F2; 
+      color: #000;
+	}
+	.next-link:hover {
+	  background-color: #9DD9F3;
+	  transform: scale(1.05);
+	}
+  </style>
+</head>
+<body>
+  <h1>Layout 1</h1>
+  <div class="container">
+    <div class="layout">
+      <div class="header"></div>
+      <div class="sidebar"></div>
+      <div class="top"></div>
+      <div class="main"></div>
+      <div class="bottom"></div>
+    </div>
+  </div>
+  <div class="nav-links">
+    <a class="next-link" href="layout2.html">Next</a>
+  </div>
+</body>
+</html>

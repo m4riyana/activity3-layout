@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layout 3</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column; 
+      align-items: center;
+      padding: 20px;
+      background: #F8E3BC;
+      font-family: Arial, sans-serif;
+    }
+	h1{
+      text-align: center;   
+      margin: 10px 0;      
+    }
+    .container {
+      width: 480px;
+	  height:480px;
+      border: 2px solid black;
+      padding: 10px;
+      background: #FFD6FF;
+      display: grid;
+      grid-template-rows: auto auto 1fr auto;
+      gap: 10px;
+      position: relative;
+      grid-template-columns: 100px 1fr;
+    }
+    .circle-top {
+      width: 90px;
+      height: 90px;
+      border: 1px solid black;
+      border-radius: 50%;
+	  background: #d1fae5;
+      grid-row: 1;
+      justify-self: start;
+      align-self: center;
+    }
+    .header {
+      border: 1px solid black;
+      background: #e8f0ff;
+      padding: 20px;
+      grid-row: 1;
+      grid-column: 2;
+    }
+    .nav {
+      border: 1px solid black;
+      background: #fff1c6;
+      padding: 20px;
+      grid-row: 2;
+      grid-column: 1 / span 2;
+    }
+    .content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      grid-row: 3;
+      grid-column: 1 / span 2;
+    }
+    .content div {
+      border: 1px solid black;
+      padding: 40px;
+      background: #fafafa;
+    }
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      grid-row: 4;
+      grid-column: 1 / span 2;
+    }
+    .footer {
+      flex: 1;
+      border: 1px solid black;
+      background: #dfffea;
+      padding: 40px;
+      margin-right: 10px;
+    }
+
+    .circle-bottom {
+      width: 90px;
+      height: 90px;
+      border: 1px solid black;
+      border-radius: 50%;
+	  background: #fde68a;
+      flex-shrink: 0;
+    }
+	.nav-links {
+      display: flex;
+      justify-content: center;
+      margin: 20px;
+	}
+	.nav-links a {
+	  display: inline-block;
+	  padding: 10px 20px;
+	  border-radius: 8px;
+	  font-weight: bold;
+	  text-decoration: none;
+	  transition: background-color 0.3s, transform 0.2s;
+	  font-family: "Segoe UI", Arial, sans-serif;
+	}
+	.back-link {
+      background-color: #B8E2F2; 
+	  color: #000;
+	}
+	.back-link:hover {
+	  background-color: #9DD9F3;
+	  transform: scale(1.05);
+	}
+  </style>
+</head>
+<body>
+  <h1>Layout 3</h1>
+  <div class="container">
+    <div class="circle-top"></div>
+    <div class="header"></div>
+    <div class="nav"></div>
+
+    <div class="content">
+      <div></div>
+      <div></div>
+    </div>
+
+    <div class="footer-container">
+      <div class="footer"></div>
+      <div class="circle-bottom"></div>
+    </div>
+  </div>
+   <div class="nav-links">
+    <a class="back-link" href="layout2.html">Back</a>
+  </div>
+</body>
+</html>
